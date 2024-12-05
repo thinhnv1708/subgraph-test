@@ -1,0 +1,18 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./db"
+}
+
+model Chart {
+  id       String  @id
+  interval String
+  pair     String
+  time     BigInt
+  close    Decimal
+  low      Decimal
+  high     Decimal
+}
